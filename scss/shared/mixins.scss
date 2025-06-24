@@ -1,0 +1,35 @@
+@mixin after {
+  &::after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s;
+    @content;
+  }
+}
+
+@mixin before {
+  &::before {
+    content: "";
+    position: absolute;
+    transition: all 0.3s;
+    @content;
+  }
+}
+
+@mixin text-decoration-hover($color) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration 0.3s;
+
+  &:hover {
+    text-decoration-color: $color;
+  }
+}
+
+@mixin hover {
+  &:hover {
+    @media (hover: hover) {
+      @content;
+    }
+  }
+}
