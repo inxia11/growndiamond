@@ -1,0 +1,202 @@
+.main-banner {
+    padding-top: 0;
+
+    &__inner {
+        position: relative;
+        padding: 96px 90px 200px 90px;
+        background-image: url('../img/main-banner-bg.webp');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 5px;
+
+        @include responsive1799 {
+            padding: 48px 35px 150px 35px;
+        }
+
+        @include responsive1279 {
+            padding: 18px 35px 70px 35px;
+        }
+
+        @include responsive1023 {
+            padding: 18px 13px 0px 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+
+        @include responsive1519 {
+            gap: 30px;
+        }
+
+        @include responsive1023 {
+            width: 100%;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include responsive1799 {
+            gap: 0px;
+        }
+
+        @include responsive1519 {
+            gap: 1px;
+        }
+
+        @include responsive1279 {
+            gap: 0;
+        }
+
+        span {
+            display: block;
+            position: relative;
+
+            &::before {
+                content: attr(data-text);
+                position:absolute;
+                left:0;
+                transform-origin: bottom;
+                transform: rotateX(180deg);
+                line-height: 1em;
+                background: linear-gradient(180deg, #1B1B1C 29.95%, #FFFFFF 93.75%);
+                -webkit-background-clip: text;
+                color: transparent;
+                opacity: 0.12;
+            }
+        }
+        
+        &--normal {
+            font-size: 130px;
+            
+            @include responsive1799 {
+                font-size: 110px;
+            }
+
+            @include responsive1519 {
+                font-size: 90px;
+            }
+
+            @include responsive1279 {
+                font-size: 70px;
+            }
+
+            @include responsive1023 {
+                font-size: 50px;
+            }
+
+            @include responsive389 {
+                font-size: 40px;
+            }
+
+            &::before {
+                top: -30px;
+
+                @include responsive1279 {
+                    top: -20px;
+                }
+
+                @include responsive1023 {
+                    top: -10px;
+                }
+            }
+
+        }
+
+        &--big {
+            @include responsive1799 {
+                margin-top: -15px;
+            }
+
+            @include responsive1519 {
+                margin-top: 0px;
+            }
+
+            @include responsive1279 {
+                margin-top: -10px;
+            }
+
+            @include responsive389 {
+                font-size: 60px;
+            }
+
+            &::before {
+                top: -50px;
+
+                @include responsive1279 {
+                    top: -30px;
+                }
+
+                @include responsive389 {
+                    top: -20px;
+                }
+            }
+        }
+    }
+
+
+    &__line {
+        max-width: 450px;
+        width: 100%;
+        height: 1px;
+        color: $colorWhite;
+        margin: 0;
+    }
+
+
+    &__text {
+        max-width: 400px;
+        width: 100%;
+
+        @include responsive1799 {
+            max-width: 300px;
+        }
+    }
+
+    &__btn-wrap {
+        width: 100%;
+    }
+
+
+    &__img-wrap {
+        position: absolute;
+        bottom: 0;
+        right: -200px;
+
+        @include responsive1799 {
+            max-width: 750px;
+            right: -150px;
+        }
+
+        @include responsive1519 {
+            max-width: 650px;
+            right: -120px;
+        }
+
+        @include responsive1279 {
+            max-width: 400px;
+            right: -80px;
+        }
+
+        @include responsive1023 {
+            position: relative;
+            max-width: fit-content;
+            right: -50px;
+        }
+    }
+
+}

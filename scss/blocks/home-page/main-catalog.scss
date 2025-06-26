@@ -1,0 +1,138 @@
+.main-catalog {
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: 100px;
+
+        @include responsive1799 {
+            grid-template-columns: 1fr 430px;
+            column-gap: 72px;
+        }
+
+        @include responsive1519 {
+            grid-template-columns: 1fr 400px;
+            column-gap: 72px;
+        }
+
+        @include responsive1279 {
+            grid-template-columns: 1fr 320px;
+             column-gap: 100px;
+        }
+
+        @include responsive1023 {
+            grid-template-columns: 1fr;
+            row-gap: 32px;
+        }
+    }
+
+    &__headline {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        @include responsive1799 {
+            gap: 60px;
+        }
+
+        @include responsive1023 {
+            gap: 32px;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @include responsive1799 {
+            gap: 32px;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 145px 1fr;
+        gap: 20px;
+        align-items: center;
+
+        @include responsive1799 {
+            grid-template-columns: 120px 1fr;
+        }
+
+        @include responsive1519 {
+            grid-template-columns: 110px 1fr;
+        }
+
+        @include responsive1279 {
+            grid-template-columns: 80px 1fr;
+        }
+    }
+
+    &__img-wrap {
+        max-height: 145px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include responsive1799 {
+            max-height: 120px;
+        }
+
+        @include responsive1519 {
+            max-height: 110px;
+        }
+
+        @include responsive1279 {
+            max-height: 80px;
+        }
+    }
+
+    &__img {
+        width: auto;
+        max-height: 100%;
+    }
+
+    &__item-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include responsive1799 {
+            gap: 16px;
+        }
+
+        @include responsive1519 {
+            gap: 12px;
+        }
+
+        @include responsive1279 {
+            gap: 8px;
+        }
+    }
+
+    &__item-chars {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &--en {
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+
+    &__item-char {
+        &--bold {
+            font-weight: 600;
+        }
+    }
+
+
+
+
+}

@@ -1,2 +1,213 @@
 .header {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+        min-height: 76px;
+
+        @include responsive1799 {
+            padding: 8px 0;
+            min-height: 60px;
+        }
+
+        @include responsive1023 {
+            min-height: 45px;
+        }
+
+    }
+
+    &__logo-wrap {
+        max-width: 218px;
+
+        @include responsive1799 {
+            max-width: 200px;
+        }
+
+        @include responsive1519 {
+            max-width: 150px;
+        }
+
+        @include responsive1279 {
+            max-width: 100px;
+        }
+    }
+
+    &__menu-wrap {
+        display: contents;
+
+        @include responsive1023 {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+
+        @include responsive1799 {
+            gap: 40px;
+        }
+
+        @include responsive1519 {
+            gap: 32px;
+        }
+
+    }
+
+    &__menu-link {
+        display: contents;
+    }
+
+    &__menu-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 4px 8px;
+        transition: all 0.3s;
+        background-color: #111516;
+        border-radius: 20px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 20px;
+            z-index: -1;
+            background: linear-gradient(0deg, #000000 0%, #FFDEB8 69.23%, #C7720E 100%);
+            top: -1px; bottom: -1px;
+            left: -1px; right: -1px;
+            height: 0%;
+            transform: rotate(180deg);
+            transition: height 0.3s;
+        }
+
+        &:hover {
+            &::after {
+                height: 110%;
+            }
+        }
+        
+        &.active {
+            &::after {
+                height: 110%;
+            }
+        }
+    }
+
+    &__contact-wrap {
+        display: flex;
+        align-items:center;
+        gap: 30px;
+
+        @include responsive1023 {
+            gap: 16px;
+        }
+    }
+
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 26px;
+
+        svg {
+            height: 100%;
+        }
+    }
+
+    &__contact-link {
+        display: contents;
+    }
+
+    &__burger {
+        display: none;
+
+        @include responsive1023 {
+            display: flex;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        position: absolute;
+        top: -450px;
+        width: 100%;
+        background: $baseColorDark;
+        transition: all 0.3s;
+        padding: 16px 32px 26px 32px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        left: 0;
+        
+        &.active {
+            top: 0;
+        }
+
+        @include responsive1023 {
+            display: flex;
+
+            
+        }
+    }
+
+    &-mobile {
+        &__close-wrap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &__close {
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        &__menu-wrap {
+            width: 100%;
+        }
+
+        &__menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        &__menu-item {
+            width: 100%;
+
+            &:hover {
+                .header-mobile__menu-name {
+                    font-weight: 600;
+                    color: transparent;
+                }
+            }
+        }
+
+        &__menu-link {
+            display: contents;
+        }
+
+        &__menu-name {
+            font-size: 18px;
+            font-weight: 400;
+            background-image: $baseGradient;
+            color: #fff;
+            background-clip: text;
+            transition: all 0.3s;
+
+        }
+    }
+
 }

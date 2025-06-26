@@ -1,115 +1,118 @@
-use 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.caption {
+.h-big {
   font-family: $fontMainTitle;
-  font-weight: 600;
+  font-size: 180px;
+  line-height: 100%;
+  font-weight: 700;
+
+  @include responsive1799 {
+    font-size: 150px;
+  }
+
+  @include responsive1519 {
+    font-size: 130px;
+  }
+
+  @include responsive1279 {
+    font-size: 110px;
+  }
+
+  @include responsive1023 {
+    font-size: 80px;
+  }
 }
 
 h1,
 .caption--h1 {
-  font-size: 44px;
-  line-height: 120%;
-  font-weight: 400;
+  font-family: $fontMainTitle;
+  font-size: 100px;
+  line-height: 110%;
+  font-weight: 700;
+
+  @include responsive1799 {
+    font-size: 80px;
+  }
 
   @include responsive1519 {
-    font-size: 36px;
+    font-size: 70px;
   }
 
   @include responsive1279 {
-    font-size: 32px;
+    font-size: 56px;
   }
 
   @include responsive1023 {
-    font-size: 30px;
-  }
-
-  @include responsive767 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
 h2,
 .caption--h2 {
-  font-size: 96px;
+  font-family: $fontMain;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 100%;
+
+  @include responsive1799 {
+    font-size: 32px;
+  }
 
   @include responsive1519 {
-    font-size: 56px;
+    font-size: 28px;
   }
 
   @include responsive1279 {
-    font-size: 56px;
+    font-size: 26px;
   }
 
   @include responsive1023 {
-    font-size: 55px;
-  }
-
-  @include responsive767 {
-    font-size: 55px;
-  }
-
-  @include responsive479 {
-    font-size: 30px;
+    font-size: 22px;
+    line-height: 120%;
   }
 }
 
 h3,
 .caption--h3 {
-  font-size: 44px;
-  line-height: 120%;
+  font-family: $fontMain;
+  font-size: 32px;
   font-weight: 400;
+  line-height: 110%;
 
-  @include responsive1519 {
-    font-size: 30px;
-  }
-
-  @include responsive1279 {
-    font-size: 30px;
-  }
-
-  @include responsive1023 {
+  @include responsive1799 {
     font-size: 28px;
   }
 
-  @include responsive767 {
+  @include responsive1519 {
     font-size: 24px;
   }
 
-  @include responsive639 {
+  @include responsive1279 {
+    font-size: 22px;
+  }
+
+  @include responsive1023 {
     font-size: 18px;
   }
 }
 
 h4,
 .caption--h4 {
-  font-size: 30px;
+  font-family: $fontMain;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 120%;
 
-  @include responsive1519 {
-    font-size: 28px;
-  }
-
-  @include responsive1279 {
-    font-size: 24px;
-  }
-
-  @include responsive767 {
-    font-size: 22px;
-  }
-
-  @include responsive479 {
+  @include responsive1799 {
     font-size: 18px;
   }
 
-  @include responsive389 {
-    font-size: 15px;
+  @include responsive1519 {
+    font-size: 16px;
   }
+
+  @include responsive1279 {
+    font-size: 14px;
+  }
+
 }
+
+

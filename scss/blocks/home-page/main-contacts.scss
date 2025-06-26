@@ -1,0 +1,114 @@
+.main-contacts {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        @include responsive1799 {
+            gap: 60px;
+        }
+
+        @include responsive1519 {
+            gap: 40px;
+        }
+
+        @include responsive1023 {
+            gap: 24px;
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 750px 1fr;
+        column-gap: 110px;
+
+        @include responsive1799 {
+            grid-template-columns: 680px 1fr;
+            column-gap: 74px;
+        }
+
+        @include responsive1519 {
+            grid-template-columns: 600px 1fr;
+            column-gap: 50px;
+        }
+        
+        @include responsive1279 {
+            grid-template-columns: 500px 1fr;
+            column-gap: 16px;
+        }
+
+        @include responsive1023 {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+
+    &__map-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__contacts-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include responsive1279 {
+            gap: 16px;
+        }
+    }
+
+    &__contacts-title {
+        background-image: linear-gradient(180deg, #B16206 0%, #FFDEB8 45.67%, #C7720E 100%);
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include responsive1799 {
+            gap: 20px;
+        }
+
+        @include responsive1519 {
+            gap: 12px;
+        }
+
+        @include responsive1279 {
+            gap: 6px;
+        }
+    }
+
+    &__contact-item {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        align-items: center;
+        gap: 14px;
+
+        @include responsive1519 {
+            grid-template-columns: 22px 1fr;
+        }
+
+        a {
+            display: block;
+        }
+
+        &--social {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+
+    &__contact-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+}

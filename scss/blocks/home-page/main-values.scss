@@ -1,0 +1,89 @@
+.main-values {
+    position: relative;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include responsive1799 {
+            gap: 18px;
+        }
+
+        @include responsive1519 {
+            gap: 12px;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding-left: 20px;
+        text-wrap: nowrap;
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $colorWhite;
+        }
+
+        @include responsive1519 {
+            gap: 12px;
+            padding-left: 12px;
+            font-size: 24px;
+
+            &::before {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        @include responsive1279 {
+            font-size: 22px;
+        }
+
+        @include responsive1023 {
+            gap: 10px;
+            padding-left: 10px;
+            font-size: 18px;
+
+            &::before {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+
+
+    &__img-wrap {
+        position: absolute;
+        bottom: 50px;
+        right: 0px;
+
+        @include responsive1799 {
+            max-width: 650px;
+        }
+
+        @include responsive1519 {
+            max-width: 540px;
+        }
+
+        @include responsive1279 {
+            max-width: 430px;
+        }
+
+        @include responsive1023 {
+            display: none;
+        }
+
+    }
+}

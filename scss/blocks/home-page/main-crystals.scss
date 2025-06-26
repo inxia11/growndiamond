@@ -1,0 +1,34 @@
+.main-crystals {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        justify-content: center;
+        gap: 32px;
+
+        @include responsive1023 {
+            gap: 0;
+        }
+    }
+
+    &__img-wrap {
+        position: relative;
+    }
+
+    &__img--mirror {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transform: scale(1, -1);
+        z-index: -1;
+        opacity: 0.1;
+        mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        mask-size: 100% 100%;
+        mask-position: top center;
+        mask-repeat: no-repeat;
+    }
+
+    
+
+
+}

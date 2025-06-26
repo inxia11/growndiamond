@@ -1,0 +1,40 @@
+.main-video {
+    &__content {
+        display: grid;
+        grid-template-columns: 875px 1fr;
+        column-gap: 50px;
+
+        @include responsive1799 {
+            grid-template-columns: 665px 1fr;
+        }
+
+        @include responsive1519 {
+            grid-template-columns: 630px 1fr;
+            column-gap: 32px;
+        }
+
+        @include responsive1279 {
+            grid-template-columns: 475px 1fr;
+            column-gap: 24px;
+        }
+
+        @include responsive1023 {
+            grid-template-columns: 1fr;
+            row-gap: 16px;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+
+        @include responsive1279 {
+            padding-top: 40px;
+        }
+
+        @include responsive1023 {
+            padding-top: 0;
+        }
+    }
+}

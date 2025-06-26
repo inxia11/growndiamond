@@ -1,0 +1,48 @@
+.main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: max-content;
+    padding: 11px 45px;
+    box-sizing: border-box;
+    position: relative;
+    height: 56px;
+    text-wrap: nowrap;
+    font-weight: 600;
+
+    @include responsive1799 {
+        height: auto;
+    }
+
+    @include responsive1279 {
+        max-width: 230px;
+    }
+
+    @include responsive1023 {
+        max-width: none;
+    }
+    
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 30px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 2px;
+        background: $baseGradient;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        &::before {
+            transform: scale(1.03);
+        }
+    }
+
+}
