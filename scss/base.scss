@@ -1,8 +1,9 @@
 body {
   font-family: $fontMain;
-  background-image: linear-gradient(0deg, #111516, #000, #000, #111516);
+  //background-image: linear-gradient(0deg, #111516, #000, #000, #111516);
+  background-color: $baseColorDark;
   color: $colorWhite;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 120%;
   font-weight: 400;
   font-variant-ligatures: none;
@@ -293,48 +294,310 @@ svg {
 
 }
 
-.pagination {
-  margin-top: 32px;
 
-  ul {
+.check-block {
+  input {
+    display: none;
+
+    &:checked + label {
+      &:before {
+        background-color: $colorWhite;
+      }
+
+      &::after {
+        background-color: $colorWhite;
+        opacity: 1;
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    padding-left: 34px;
+    text-decoration-color: transparent;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 1px;
+    text-decoration-thickness: 1px;
+    display: block;
+    align-items: center;
+    gap: 10px;
+    color: $colorWhite;
+
+
+    @include responsive1279 {
+      font-size: 12px;
+    }
+
+    @include responsive1023 {
+      font-size: 10px;
+    }
+
+    a {
+      text-decoration: underline;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @include before {
+      left: 0;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      border: 0;
+      border-radius: 1px;
+      overflow: hidden;
+      transform: translateY(-50%);
+      background-color: $colorWhite;
+
+    }
+
+    @include after {
+      background-color: $colorWhite;
+      left: 0;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      opacity: 0;
+      border-radius: 1px;
+      overflow: hidden;
+      transform: translateY(-50%);
+      background-position: center;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23000000' stroke-width='4'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-size: 13px
+
+    }
+  }
+}
+
+.base-section {
+  position: relative;
+
+  &--bg-right {
+     &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(100% - 140px);
+      height: 100%;
+      background-color: #FFF2F20A;
+      z-index: -1;
+      border-radius: 5px;
+
+      @include responsive1799 {
+        width: calc(100% - 120px);
+      }
+
+      @include responsive1519 {
+        width: calc(100% - 45px);
+      }
+
+      @include responsive1023 {
+        width: 100%;
+      }
+    }
+  }
+
+  &--bg-left {
+     &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 140px);
+      height: 100%;
+      background-color: #FFF2F20A;
+      z-index: -1;
+      border-radius: 5px;
+
+      @include responsive1799 {
+        width: calc(100% - 120px);
+      }
+
+      @include responsive1519 {
+        width: calc(100% - 45px);
+      }
+
+      @include responsive1023 {
+        width: 100%;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    @include responsive1519 {
+      gap: 40px;
+    }
+
+    &--two-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include responsive1023 {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+      }
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &:has( .base-section__title) {
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &--center {
+      justify-content: center;
+
+      &:has( .base-section__title) {
+        justify-content: center;
+        height: 100%;
+      }
+    }
+  }
+
+  &__image-container {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+ 
+}
+
+
+.swiper-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+
+  &__button {
+      background-image: url("../img/svg/arrow-right.svg");
+      width: 30px;
+      height: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: all 0.3s;
+
+      &--prev {
+        transform: rotate(180deg);
+        left: -100px;
+
+        &:hover {
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &--next {
+        right: 0px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+  }
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+
+  &__wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 32px;
   }
 
-  li {
-  }
-
-  .pagination-link {
-    width: 42px;
-    height: 42px;
+  &__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
+    opacity: 0.6;
     transition: all 0.3s;
-    border-radius: 8px;
-
-    @include responsive639 {
-      width: 32px;
-      height: 32px;
-      font-size: 14px;
-    }
-
-    &.active {
-      background-color: rgba(78, 84, 87, 0.2);
-    }
-  }
-
-  a.pagination-link {
-    cursor: pointer;
 
     @include hover {
-      background-color: rgba(78, 84, 87, 0.2);
+      opacity: 1;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &--prev {
+
+      .pagination__link {
+        display: flex;
+        transform: rotate(180deg);
+        background-image: url("../img/svg/pagin-arrow.svg");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include hover {
+          transform: rotate(180deg) scale(1.1);
+        }
+      }
+      
+
+    }
+
+    &--next {
+      .pagination__link {
+        display: flex;
+        background-image: url("../img/svg/pagin-arrow.svg");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include hover {
+          transform: scale(1.1);
+        }
+      }
+
     }
   }
+
 }
 
 .swiper-controls-simple {
@@ -455,66 +718,7 @@ svg {
   }
 }
 
-.swiper-controls {
-  position: relative;
-  display: flex;
-  gap: 20px;
-}
 
-.swiperBtnPrev {
-  cursor: pointer;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  transition: all 0.3s;
-  transform: rotate(-180deg);
-  background-size: contain;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 24.3333H47.6667M47.6667 24.3333L24.3333 1M47.6667 24.3333L24.3333 47.6667' stroke='%230F0F0F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-
-  @include responsive767 {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-  }
-
-  &:hover {
-    transform: rotate(-180deg) scale(0.9);
-  }
-}
-
-.swiperBtnNext {
-  cursor: pointer;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  transition: all 0.3s;
-  background-size: contain;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 24.3333H47.6667M47.6667 24.3333L24.3333 1M47.6667 24.3333L24.3333 47.6667' stroke='%230F0F0F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-
-  @include responsive767 {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-  }
-
-  &:hover {
-    transform: scale(0.9);
-  }
-}
 
 .input-item {
   width: 100%;
@@ -554,113 +758,7 @@ svg {
   }
 }
 
-.check-block {
-  input {
-    display: none;
 
-    &:checked + label {
-      &:before {
-        background-color: $colorBlack;
-      }
-
-      &::after {
-        background-color: $colorBlack;
-        opacity: 1;
-      }
-    }
-  }
-
-  label {
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    position: relative;
-    padding-left: 24px;
-    text-decoration-color: transparent;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 1px;
-    text-decoration-thickness: 1px;
-    display: block;
-    align-items: center;
-    gap: 8px;
-    padding-left: 70px;
-    color: $colorWhite;
-
-    @include responsive1519 {
-      font-size: 14px;
-      line-height: 17px;
-      padding-left: 65px;
-    }
-
-    @include responsive1279 {
-      font-size: 12px;
-    }
-
-    @include responsive1023 {
-      padding-left: 50px;
-    }
-
-    a {
-      text-decoration: underline;
-      opacity: 0.3;
-      transition: opacity 0.3s;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    @include before {
-      left: 0;
-      top: 50%;
-      width: 48px;
-      height: 48px;
-      border: 0;
-      border-radius: 4px;
-      overflow: hidden;
-      transform: translateY(-50%);
-      background-color: $colorWhite;
-
-      @include responsive1519 {
-        width: 42px;
-        height: 42px;
-      }
-
-      @include responsive1023 {
-        width: 38px;
-        height: 38px;
-      }
-    }
-
-    @include after {
-      background-color: $colorWhite;
-      left: 0;
-      top: 50%;
-      width: 48px;
-      height: 48px;
-      opacity: 0;
-      border-radius: 4px;
-      overflow: hidden;
-      transform: translateY(-50%);
-      background-position: center;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23EDEADF' stroke-width='4'/%3e%3c/svg%3e ");
-      background-repeat: no-repeat;
-
-      @include responsive1519 {
-        width: 42px;
-        height: 42px;
-        background-size: 24px;
-      }
-
-      @include responsive1023 {
-        width: 38px;
-        height: 38px;
-        background-size: 50%;
-      }
-    }
-  }
-}
 
 .radio-block {
   position: relative;

@@ -10,10 +10,14 @@
 @import "./components/modals";
 @import "./components/header";
 @import "./components/footer";
+@import "./components/forms";
+@import "./components/banners";
 
 // HOME PAGE
 @import "blocks/home-page/home-page";
 @import "blocks/work-process/work-process";
+@import "blocks/contacts/contacts-map";
+@import "blocks/blog/blog";
 
 
 // BLOCKS

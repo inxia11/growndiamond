@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+
+    <title>Карточка товара</title>
+
+    <!-- <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" /> -->
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo-wrap">
+                        <a href="#" class="header__logo-link">
+                            <picture>
+                                <source srcset="../../img/logo.webp" type="image/webp">
+                                <img src="../../img/logo.png" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="header__menu-wrap">
+                        <ul class="header__menu">
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    <span class="header__menu-name active">Каталог</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    <span class="header__menu-name">История</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    <span class="header__menu-name">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    <span class="header__menu-name">Информация</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    <span class="header__menu-name">Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__contact-wrap">
+                        <div class="header__contact-item">
+                            <a href="#" class="header__contact-link">
+                                <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M27.8987 19.2263C27.7232 18.9431 27.264 18.7706 26.577 18.4256C25.8919 18.0806 22.5001 16.4213 21.8709 16.1962C21.2362 15.9656 20.7771 15.8493 20.3178 16.5374C19.8641 17.2256 18.5426 18.7706 18.1374 19.2319C17.7361 19.6912 17.3348 19.7494 16.6459 19.41C15.9571 19.0613 13.7356 18.3412 11.1035 16.0031C9.05574 14.1806 7.67235 11.9363 7.2729 11.2481C6.86787 10.5618 7.23183 10.1907 7.57345 9.84941C7.88145 9.54006 8.26229 9.04685 8.60764 8.64377C8.95298 8.24443 9.0669 7.96124 9.29646 7.50195C9.52231 7.04252 9.40853 6.64318 9.23865 6.29631C9.0669 5.95131 7.6911 2.57631 7.11433 1.2019C6.54113 -0.170634 5.96808 0.0562063 5.56491 0.0562063C5.16346 0.0562063 4.70434 0 4.24507 0C3.7858 0 3.03914 0.166896 2.40999 0.855034C1.78098 1.54317 0 3.20249 0 6.58122C0 9.96369 2.46609 13.2244 2.81144 13.6818C3.15865 14.1375 7.57903 21.2981 14.5813 24.0469C21.5871 26.7937 21.5873 25.8768 22.8492 25.7607C24.1148 25.6444 26.9261 24.1012 27.4974 22.5C28.0723 20.8912 28.0723 19.5131 27.8987 19.2263Z" fill="url(#paint0_linear_354_458)"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_354_458" x1="14" y1="0" x2="14" y2="26" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#B16206"/>
+                                            <stop offset="0.456731" stop-color="#E5A861"/>
+                                            <stop offset="1" stop-color="#C7720E"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header__contact-item">
+                            <a href="#" class="header__contact-link">
+                                <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.5 0.666666H3.16667C1.425 0.666666 0.0158333 2.09167 0.0158333 3.83333L0 22.8333C0 24.575 1.425 26 3.16667 26H28.5C30.2417 26 31.6667 24.575 31.6667 22.8333V3.83333C31.6667 2.09167 30.2417 0.666666 28.5 0.666666ZM28.5 7L15.8333 14.9167L3.16667 7V3.83333L15.8333 11.75L28.5 3.83333V7Z" fill="url(#paint0_linear_354_459)"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_354_459" x1="15.8333" y1="0.666666" x2="15.8333" y2="26" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#B16206"/>
+                                            <stop offset="0.456731" stop-color="#E5A861"/>
+                                            <stop offset="1" stop-color="#C7720E"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header__contact-item header__burger">
+                            <a href="javascript:void(0)" class="header__contact-link">
+                                <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8.12757H23M1 1.16319H23M1 15.1632H23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile header-mobile">
+                    <div class="header-mobile__close-wrap">
+                        <a href="javascript:void(0)" class="header-mobile__close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header-mobile__menu-wrap">
+                        <ul class="header-mobile__menu">
+                            <li class="header-mobile__menu-item">
+                                <a href="#" class="header-mobile__menu-link">
+                                    <span class="header-mobile__menu-name">Каталог</span>
+                                </a>
+                            </li>
+                            <li class="header-mobile__menu-item">
+                                <a href="#" class="header-mobile__menu-link">
+                                    <span class="header-mobile__menu-name">История</span>
+                                </a>
+                            </li>
+                            <li class="header-mobile__menu-item">
+                                <a href="#" class="header-mobile__menu-link">
+                                    <span class="header-mobile__menu-name">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="header-mobile__menu-item">
+                                <a href="#" class="header-mobile___menu-link">
+                                    <span class="header-mobile__menu-name">Информация</span>
+                                </a>
+                            </li>
+                            <li class="header-mobile__menu-item">
+                                <a href="#" class="header-mobile__menu-link">
+                                    <span class="header-mobile__menu-name">Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+
+            <section class="section breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__inner">
+                        <a href="#" class="breadcrumbs__back-link">Назад</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section catalog-detail">
+                <div class="container">
+                    <div class="catalog-detail__inner">
+                        <div class="catalog-detail__content--top">
+                            <div class="catalog-detail__img-wrap">
+                                <div class="catalog-detail__img-slider">
+                                    <div class="catalog-detail__img-slider-wrapper swiper-wrapper">
+                                        <div class="catalog-detail__img-item swiper-slide">
+                                            <img src="../../images/catalog-detail-1.jpg" alt="catalog-detail">
+                                        </div>
+                                        <div class="catalog-detail__img-item">
+                                            <img src="../../images/catalog-detail-2.jpg" alt="catalog-detail">
+                                        </div>
+                                        <div class="catalog-detail__img-item">
+                                            <img src="../../images/catalog-detail-3.jpg" alt="catalog-detail">
+                                        </div>
+                                        <div class="catalog-detail__img-item">
+                                            <img src="../../images/catalog-detail-4.jpg" alt="catalog-detail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-detail__main-inform">
+                                <div class="catalog-detail__headline">
+                                    <h1 class="catalog-detail__title">Бриллиант круглый голубой 0,050 карат</h1>
+                                    <p class="catalog-detail__subtitle">Форма огранки: Круг,  Насыщенно-ярко голубой</p>
+                                </div>
+                                <div class="catalog-detail__chars">
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                    <div class="catalog-detail__char">
+                                        <p class="catalog-detail__char-name">Форма камня</p>
+                                        <p class="catalog-detail__char-value">Круг</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-detail__description">
+                                    <p class="catalog-detail__description-title">Описание</p>
+                                    <p class="catalog-detail__description-text">
+                                        Каждый камень — это не просто природное сокровище, а продуманный до мелочей подарок или инвестиция. Ваш заказ прибудет в элегантной фирменной коробке с логотипом. Внутри вас ждёт сам камень, аккуратно закреплённый для безопасной перевозких. Ваш заказ прибудет в элегантной фирменной коробке с логотипом. Внутри вас ждёт сам камень, аккуратно закреплённый для безопасной перевозких. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog-detail__content--bottom">
+                            <div class="catalog-detail__add-inform">
+                                <div class="catalog-detail__add-inform-item">
+                                    <p class="catalog-detail__add-inform-title">Способы оплаты</p>
+                                    <div class="catalog-detail__add-inform-value">
+                                        <ul>
+                                            <li>Оплата наличными.</li>
+                                            <li>Любые банковские карты и СБП.</li>
+                                            <li>Оплата по расчетному счету.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalog-detail__add-inform-item">
+                                    <p class="catalog-detail__add-inform-title">Доставка драгоценных камней</p>
+                                    <div class="catalog-detail__add-inform-value">
+                                        <ul>
+                                            <li>После оформления заказа с вами свяжется менеджер для расчета доставки.</li>
+                                            <li>Вы так же можете забрать заказ сами в нашем офисе по адресу: Москва, ул. Смольная 12</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section banner-values">
+                <div class="container">
+                    <div class="banner-values__inner">
+                        <div class="banner-values__item">
+                            <h3 class="banner-values__title">Безупречное качество</h3>
+                            <p class="banner-values__text">Каждый созданный камень проходит сертификацию в геммологической лаборатории и сопровождается документами.</p>
+                        </div>
+                        <div class="banner-values__item">
+                            <h3 class="banner-values__title">Индивидуальный подход</h3>
+                            <p class="banner-values__text">Хотите особый дизайн?<br>Мы бесплатно разработаем 3D-модель ювелирного изделия и предложим вам скидку до 20% на его изготовление.</p>
+                        </div>
+                        <div class="banner-values__item">
+                            <h3 class="banner-values__title">Прозрачность</h3>
+                            <p class="banner-values__text">Никаких скрытых наценок! Вы платите только за материалы и работу ювелира. Готовое изделие мы ставим на учёт в системе ГИИС ДМДК для присвоения уникального номера. Наша команда профессионалов поможет вам выбрать идеальный бриллиант, учитывая Ваши пожелания и бюджет. </p>
+                        </div>
+                    </div>
+                    <div class="banner-values__bg-wrap">
+                        <picture>
+                            <source srcset="../../img/banner-values.webp" type="image/webp">
+                            <img src="../../img/banner-values.png" class="banner-values__bg" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section catalog-similar">
+                <div class="container">
+                    <div class="catalog-similar__inner">
+                        <div class="catalog-similar__headline">
+                            <h2 class="catalog-similar__title">Похожие товары</h2>
+                        </div>
+                        
+                        <div class="catalog-similar__slider">
+                            <div class="catalog-similar__slider-wrapper swiper-wrapper">
+                                <div class="catalog-similar__slide swiper-slide">
+                                    <div class="catalog-similar__slide-wrap catalog-item">
+                                        <a href="#" class="catalog-item__link">
+                                            <div class="catalog-item__img-wrap">
+                                                <picture>
+                                                    <source srcset="../../img/catalog-item-1.webp" type="image/webp">
+                                                    <img src="../../img/catalog-item-1.png" class="catalog-section__catalog-img" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="catalog-section__text-wrap">
+                                                <h3 class="catalog-item__form-value">Форма огранки: Круг</h3>
+                                                <p class="catalog-item__color-value">Цвет: Насыщенно-ярко голубой</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="catalog-similar__slide swiper-slide">
+                                    <div class="catalog-similar__slide-wrap catalog-item">
+                                        <a href="#" class="catalog-item__link">
+                                            <div class="catalog-item__img-wrap">
+                                                <picture>
+                                                    <source srcset="../../img/catalog-item-1.webp" type="image/webp">
+                                                    <img src="../../img/catalog-item-1.png" class="catalog-section__catalog-img" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="catalog-section__text-wrap">
+                                                <h3 class="catalog-item__form-value">Форма огранки: Круг</h3>
+                                                <p class="catalog-item__color-value">Цвет: Насыщенно-ярко голубой</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="catalog-similar__slide swiper-slide">
+                                    <div class="catalog-similar__slide-wrap catalog-item">
+                                        <a href="#" class="catalog-item__link">
+                                            <div class="catalog-item__img-wrap">
+                                                <picture>
+                                                    <source srcset="../../img/catalog-item-1.webp" type="image/webp">
+                                                    <img src="../../img/catalog-item-1.png" class="catalog-section__catalog-img" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="catalog-section__text-wrap">
+                                                <h3 class="catalog-item__form-value">Форма огранки: Круг</h3>
+                                                <p class="catalog-item__color-value">Цвет: Насыщенно-ярко голубой</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="catalog-similar__slide swiper-slide">
+                                    <div class="catalog-similar__slide-wrap catalog-item">
+                                        <a href="#" class="catalog-item__link">
+                                            <div class="catalog-item__img-wrap">
+                                                <picture>
+                                                    <source srcset="../../img/catalog-item-1.webp" type="image/webp">
+                                                    <img src="../../img/catalog-item-1.png" class="catalog-section__catalog-img" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="catalog-section__text-wrap">
+                                                <h3 class="catalog-item__form-value">Форма огранки: Круг</h3>
+                                                <p class="catalog-item__color-value">Цвет: Насыщенно-ярко голубой</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="catalog-similar__slide swiper-slide">
+                                    <div class="catalog-similar__slide-wrap catalog-item">
+                                        <a href="#" class="catalog-item__link">
+                                            <div class="catalog-item__img-wrap">
+                                                <picture>
+                                                    <source srcset="../../img/catalog-item-1.webp" type="image/webp">
+                                                    <img src="../../img/catalog-item-1.png" class="catalog-section__catalog-img" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="catalog-section__text-wrap">
+                                                <h3 class="catalog-item__form-value">Форма огранки: Круг</h3>
+                                                <p class="catalog-item__color-value">Цвет: Насыщенно-ярко голубой</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-similar__controls">
+                            <div class="swiper-button-prev catalog-similar__button catalog-similar__button--prev"></div>
+                            <div class="swiper-button-next catalog-similar__button catalog-similar__button--next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                    
+
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top__inner">
+                        <div class="footer-top__logo-wrap">
+                            <a href="#" class="footer-top__logo-link">
+                                <picture>
+                                    <source srcset="../../img/logo.webp" type="image/webp">
+                                    <img src="../../img/logo.png" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="footer-top__menu-wrap">
+                            <ul class="footer-top__menu">
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">О нас</span>
+                                    </a>
+                                </li>
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">Каталог</span>
+                                    </a>
+                                </li>
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">Информация</span>
+                                    </a>
+                                </li>
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">Как мы работаем</span>
+                                    </a>
+                                </li>
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">Услуги</span>
+                                    </a>
+                                </li>
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">Контакты</span>
+                                    </a>
+                                </li>
+                                <li class="footer-top__menu-item">
+                                    <a href="#" class="footer-top__menu-link">
+                                        <span class="footer-top__menu-name">О руководителе</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-top__contacts-wrap">
+                            <div class="footer-top__contacts-item">
+                                <div class="footer-top__contacts-email">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_287_132)">
+                                            <path d="M20 4.04297H4C2.9 4.04297 2.01 4.94297 2.01 6.04297L2 18.043C2 19.143 2.9 20.043 4 20.043H20C21.1 20.043 22 19.143 22 18.043V6.04297C22 4.94297 21.1 4.04297 20 4.04297ZM20 8.04297L12 13.043L4 8.04297V6.04297L12 11.043L20 6.04297V8.04297Z" fill="url(#paint0_linear_287_132)"/>
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_287_132" x1="12" y1="4.04297" x2="12" y2="20.043" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#B16206"/>
+                                                <stop offset="0.456731" stop-color="#FFDEB8"/>
+                                                <stop offset="1" stop-color="#C7720E"/>
+                                            </linearGradient>
+                                            <clipPath id="clip0_287_132">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <a href="mailto:info@growndiamond.ru" class="footer-top__contacts-link">info@growndiamond.ru</a>
+                                </div>
+                            </div>
+                            <div class="footer-top__contacts-item">
+                                <div class="footer-top__contacts-tel">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_287_137)">
+                                            <path d="M20.01 15.423C18.78 15.423 17.59 15.223 16.48 14.863C16.13 14.743 15.74 14.833 15.47 15.103L13.9 17.073C11.07 15.723 8.42 13.173 7.01 10.243L8.96 8.58297C9.23 8.30297 9.31 7.91297 9.2 7.56297C8.83 6.45297 8.64 5.26297 8.64 4.03297C8.64 3.49297 8.19 3.04297 7.65 3.04297H4.19C3.65 3.04297 3 3.28297 3 4.03297C3 13.323 10.73 21.043 20.01 21.043C20.72 21.043 21 20.413 21 19.863V16.413C21 15.873 20.55 15.423 20.01 15.423Z" fill="url(#paint0_linear_287_137)"/>
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_287_137" x1="12" y1="3.04297" x2="12" y2="21.043" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#B16206"/>
+                                                <stop offset="0.456731" stop-color="#FFDEB8"/>
+                                                <stop offset="1" stop-color="#C7720E"/>
+                                            </linearGradient>
+                                            <clipPath id="clip0_287_137">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <a href="tel:79779664442" class="footer-top__contacts-link">+7 (977) 966-44-42</a>
+                                </div>
+                            </div>
+                            <div class="footer-top__contacts-item">
+                                <div class="footer-top__social">
+                                    <div class="footer-top__social-tg">
+                                        <a href="#" class="footer-top__contacts-link">
+                                            <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.5946 14.4994L10.148 20.6419C10.7869 20.6419 11.0637 20.3734 11.3956 20.0512L14.3916 17.2516L20.5994 21.6967C21.7379 22.3171 22.5401 21.9904 22.8473 20.6726L26.9221 2.00353L26.9232 2.00243C27.2844 0.356844 26.3146 -0.286652 25.2053 0.117045L1.25348 9.08303C-0.381185 9.70343 -0.356434 10.5944 0.975598 10.9982L7.09911 12.8605L21.3228 4.15842C21.9922 3.72502 22.6009 3.96482 22.1002 4.39822L10.5946 14.4994Z" fill="white"/>
+                                            </svg>  
+                                        </a>
+                                    </div>
+                                    <div class="footer-top__social-wp">
+                                        <a href="#" class="footer-top__contacts-link">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_287_146)">
+                                                    <g clip-path="url(#clip1_287_146)">
+                                                        <path d="M24 11.6912C24 18.1477 18.7253 23.3818 12.2172 23.3818C10.1519 23.3818 8.21184 22.8535 6.52296 21.9284L0 24L2.12632 17.7259C1.05416 15.965 0.436691 13.8974 0.436691 11.6905C0.437474 5.23403 5.71063 0 12.2188 0C18.7261 0.0015652 24 5.23481 24 11.6912ZM12.2164 1.86415C6.75462 1.86415 2.3118 6.2733 2.3118 11.6936C2.3118 13.8442 3.01301 15.8351 4.19865 17.4551L2.96214 21.1044L6.76716 19.8953C8.33232 20.9221 10.2051 21.52 12.2164 21.52C17.6782 21.52 22.1225 17.1116 22.1225 11.6912C22.1241 6.2733 17.6789 1.86415 12.2164 1.86415ZM18.1673 14.3842C18.0937 14.266 17.9012 14.194 17.6132 14.05C17.326 13.906 15.904 13.2134 15.6403 13.1195C15.3742 13.0232 15.1817 12.9747 14.9891 13.2619C14.7989 13.5491 14.2449 14.194 14.075 14.3866C13.9068 14.5783 13.7386 14.6026 13.4498 14.4609C13.161 14.3153 12.2297 14.0148 11.1262 13.0389C10.2677 12.2782 9.68778 11.3414 9.52032 11.0542C9.35052 10.7678 9.5031 10.6129 9.64632 10.4704C9.77544 10.3413 9.9351 10.1354 10.0799 9.9672C10.2247 9.80052 10.2724 9.68232 10.3687 9.49062C10.4633 9.29886 10.4156 9.13218 10.3444 8.9874C10.2724 8.8434 9.69564 7.43472 9.45384 6.86106C9.21354 6.28818 8.9733 6.38286 8.80428 6.38286C8.63598 6.38286 8.4435 6.3594 8.25096 6.3594C8.05842 6.3594 7.7454 6.42906 7.48164 6.71628C7.21794 7.0035 6.4713 7.69608 6.4713 9.10632C6.4713 10.5181 7.50516 11.8791 7.64994 12.07C7.7955 12.2602 9.64866 15.2489 12.5842 16.3963C15.5213 17.5427 15.5213 17.1601 16.0504 17.1116C16.5809 17.063 17.7595 16.4189 17.999 15.7506C18.2401 15.0791 18.2401 14.5039 18.1673 14.3842Z" fill="white"/>
+                                                    </g>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_287_146">
+                                                        <rect width="24" height="24" fill="white"/>
+                                                    </clipPath>
+                                                    <clipPath id="clip1_287_146">
+                                                        <rect width="24" height="24" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom__inner">
+                        <div class="footer-bottom__policy-inform">
+                            <p class="footer-bottom__copyright">
+                                2024 © Все права защищены. 
+                                <a href="#" class="footer-bottom__copyright--link">Политика обработки персональных данных.</a>
+                            </p>
+                        </div>
+                        <div class="footer-bottom__dev-company">
+                            <a href="#" class="footer-bottom__dev-link">
+                                <svg width="54" height="16" viewBox="0 0 54 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.9688 0H0V15.7288H2.25V9.08475H8.71875L10.4062 7.45763V6.64407H2.25V2.30508H10.9688V0Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2422 16C19.3876 16 21.9375 13.6324 21.9375 10.7119C21.9375 7.79131 19.3876 5.42373 16.2422 5.42373C13.0968 5.42373 10.5469 7.79131 10.5469 10.7119C10.5469 13.6324 13.0968 16 16.2422 16ZM16.2422 14.1017C18.2226 14.1017 19.8281 12.584 19.8281 10.7119C19.8281 8.83971 18.2226 7.32203 16.2422 7.32203C14.2617 7.32203 12.6562 8.83971 12.6562 10.7119C12.6562 12.584 14.2617 14.1017 16.2422 14.1017Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M48.3047 16C51.4501 16 54 13.6324 54 10.7119C54 7.79131 51.4501 5.42373 48.3047 5.42373C45.1593 5.42373 42.6094 7.79131 42.6094 10.7119C42.6094 13.6324 45.1593 16 48.3047 16ZM48.3047 14.1017C50.2851 14.1017 51.8906 12.584 51.8906 10.7119C51.8906 8.83971 50.2851 7.32203 48.3047 7.32203C46.3242 7.32203 44.7188 8.83971 44.7188 10.7119C44.7188 12.584 46.3242 14.1017 48.3047 14.1017Z" fill="white"/>
+                                    <path d="M25.875 5.69492H23.625V14.2373L25.1719 15.7288H32.9062V5.69492H30.375V13.5593H25.875V5.69492Z" fill="white"/>
+                                    <path d="M37.6875 5.69492H35.2969V15.7288H37.6875V9.35593L40.9219 7.59322H42.6094V5.69492H40.0781L37.6875 7.05085V5.69492Z" fill="white"/>
+                                </svg>
+                                <span class="footer-bottom__dev-sub">Powered by</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/selectric/jquery.selectric.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>

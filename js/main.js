@@ -67,6 +67,80 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".article-similar__slider").length > 0) {
+    const swiper = new Swiper(".article-similar__slider", {
+      slidesPerView: 1.8,
+      spaceBetween: 16,
+      loop: true,
+      autoHeight: true,
+      navigation: {
+        prevEl: ".article-similar__button--prev",
+        nextEl: ".article-similar__button--next",
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+          autoHeight: true,
+        },
+
+        1520: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+          autoHeight: true,
+        },
+      },
+    });
+  }
+
+  if ($(".blog-section__slider").length > 0) {
+    const sliders = document.querySelectorAll(".blog-section__slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+        
+        if (!slider.swiper) {
+          navNext = $(slider)
+            .find(".blog-section__button--next")[0];
+          navPrev = $(slider)
+            .find(".blog-section__button--prev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1.8,
+            spaceBetween: 16,
+            loop: true,
+            autoHeight: true,
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+            breakpoints: {
+              767: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+                autoHeight: true,
+              },
+
+              1520: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+                autoHeight: true,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+
   
   // base
   // if (burgerMenu.length > 0) {
@@ -292,4 +366,6 @@ $(document).ready(function () {
   //   }
   // }
   // /base
+  
+  AOS.init();
 });

@@ -1,0 +1,29 @@
+.article-similar {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include responsive1279 {
+            gap: 24px;
+        }
+    }
+
+    &__headline {
+
+        @include responsive1023 {
+            max-width: calc(100% - 100px);
+        }
+    }
+
+    &__controls {
+        top: 40px;
+        right: 10px;
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+}

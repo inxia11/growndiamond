@@ -77,47 +77,8 @@
     }
 
     &__slider-controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        position: absolute;
         top: 180px;
         right: 20px;
     }
 
-    &__slider-button {
-        background-image: url("../img/svg/arrow-right.svg");
-        width: 30px;
-        height: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        transition: all 0.3s;
-    }
-
-    &__slider-button--prev {
-        transform: rotate(180deg);
-        left: -100px;
-
-        &:hover {
-            transform: rotate(180deg) scale(1.1);
-        }
-
-        &::after {
-            content: 'none';
-        }
-    }
-
-    &__slider-button--next {
-        right: 0px;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-
-        &::after {
-            content: 'none';
-        }
-    }
 }
