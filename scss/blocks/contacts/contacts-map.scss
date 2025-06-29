@@ -1,3 +1,101 @@
 .contacts-map {
-    
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @include responsive1023 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__map {
+        filter: grayscale(1);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        min-height: 500px;
+
+        @include responsive1023 {
+            min-height: auto;
+        }
+    }
+
+    .contacts-popup {
+        position: absolute;
+        top: 0;
+        right: 34px;
+        z-index: 1;
+        background: #000000CC;
+        backdrop-filter: blur(12px);
+        padding: 18px 21px;
+        border-radius: 5px;
+        max-width: 360px;
+
+        @include responsive1279 {
+            right: 10px;
+        }
+
+        @include responsive1023 {
+            position: static;
+            max-width: fit-content;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @include responsive1279 {
+                gap: 8px;
+            }
+        }
+
+        &__text-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #FFFFFF;
+
+            @include responsive1279 {
+                gap: 4px;
+                padding-bottom: 8px;
+            }
+        }
+
+        &__title {
+            font-weight: 500;
+        }
+
+        &__text {
+            font-size: 16px;
+
+            @include responsive1519 {
+                font-size: 14px;
+            }
+
+            @include responsive1279 {
+                font-size: 12px;
+            }
+        }
+
+        &__contact-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        &__soc-wrap {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+    }
 }

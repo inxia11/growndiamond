@@ -1,0 +1,18 @@
+.catalog-similar {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include responsive1519 {
+            gap: 24px;
+        }
+    }
+
+    &__controls {
+        top: 40px;
+        right: 16px;
+    }
+}

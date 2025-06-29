@@ -79,4 +79,152 @@
 
     }
 
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include responsive1279 {
+            gap: 16px;
+        }
+    }
+
+    &__text {
+        &--bold {
+            font-weight: 600;
+        }
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+}
+
+.banner-values {
+    background: linear-gradient(88.56deg, rgba(255, 242, 242, 0.06) 1.23%, rgba(255, 181, 94, 0.06) 98.19%);
+    position: relative;
+    margin-top: 100px;
+
+    @include responsive1799 {
+        margin-top: 40px;
+    }
+
+    @include responsive1279 {
+        margin-top: 20px;
+    }
+
+    @include responsive1023 {
+        margin-top: 0px;
+        padding-bottom: 0;
+    }
+
+   
+    &__inner {
+       display: flex;
+       flex-direction: column;
+       gap: 40px;
+       max-width: 650px;
+
+        @include responsive1799 {
+            gap: 16px;
+            max-width: 500px;
+        }
+
+        @include responsive1519 {
+            gap: 12px;
+        }
+
+        @include responsive1023 {
+            max-width: 100%;
+        }
+
+
+    }
+
+    &__bg-wrap {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+        @include responsive1799 {
+            max-width: 890px;
+        }
+
+        @include responsive1519 {
+            max-width: 760px;
+        }
+
+        @include responsive1279 {
+            max-width: 650px;
+        }
+
+        @include responsive1023 {
+            position: relative;
+            max-width: 100%;
+            padding-top: 12px;
+            right: -16px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
+
+
+.images-section {
+    background:  #FFF2F214;
+    position: relative;
+
+    &__inner {
+        display: flex;
+        gap: 40px;
+        padding-left: 200px;
+
+        @include responsive1799 {
+            gap: 40px;
+            padding-left: 195px;
+        }
+
+        @include responsive1519 {
+            gap: 30px;
+            padding-left: 100px;
+        }
+
+        @include responsive1023 {
+            gap: 10px;
+            padding-left: 16px;
+        }
+    }
+
+    &__image-wrap {
+        &--1 {
+            position: relative;
+            top: 0;
+        }
+
+        &--2 {
+            position: relative;
+            top: 0;
+        }
+
+        &--3 {
+            position: relative;
+            top: 150px;
+
+            @include responsive1799 {
+                top: 130px;
+            }
+
+            @include responsive1519 {
+                top: 40px;
+            }
+        }
+    }
 }

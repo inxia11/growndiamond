@@ -1,0 +1,147 @@
+.history-section {
+
+    &__content {
+        justify-content: flex-start !important;
+    }
+
+    &__inner {
+        &--big-pd {
+            padding-bottom: 100px;
+        }
+    }
+
+
+
+    &__image-container {
+        position: relative;
+        overflow: visible;
+        display: flex;
+        gap: 24px;
+
+        @include responsive1799 {
+            gap: 20px;
+        }
+
+        @include responsive1519 {
+            gap: 18px;
+        }
+
+        @include responsive1279 {
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @include responsive1023 {
+            gap: 12px;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include responsive1023 {
+            gap: 8px;
+        }
+    }
+
+    &__text-title {
+        font-weight: 600;
+        min-height: 20px;
+    }
+
+    &__image {
+        
+        &--1 {
+            position: relative;
+            top: 0;
+            z-index: 1;
+
+            @include responsive1799 {
+                max-width: 300px;
+            }
+
+            @include responsive1519 {
+                max-width: 270px;
+            }
+
+            @include responsive1279 {
+                max-width: 200px;
+            }
+
+            @include responsive1023 {
+                max-width: 45%;
+            }
+
+
+        }
+
+        &--2 {
+            position: relative;
+            top: 90px;
+            z-index: 3;
+
+            @include responsive1799 {
+                max-width: 250px;
+            }
+
+            @include responsive1519 {
+                max-width: 230px;
+            }
+
+            @include responsive1279 {
+                max-width: 180px;
+                position: absolute;
+                right: 0;
+            }
+
+            @include responsive1023 {
+                position: relative;
+                max-width: 45%;
+                top: 50px;
+            }
+        }
+    }
+
+    &__quote-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        transform: translate(-30%, 50%);
+        max-width: 800px;
+        width: 100%;
+        background: #000000B2;
+        padding: 20px 27px 20px 47px;
+
+        @include responsive1799 {
+            transform: translate(-30%, 70%);
+        }
+
+        @include responsive1279 {
+            transform: translate(-20%, 90%);
+            position: relative;
+        }
+
+        @include responsive1023 {
+            transform: none;
+            top: 60px;
+        }
+
+        &::before {
+            content: '“';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 76px;
+            line-height: 1em;
+            color: $colorWhite;
+        }
+    }
+
+    &__quote-text {
+        font-weight: 300;
+        font-style: italic;
+    }
+}

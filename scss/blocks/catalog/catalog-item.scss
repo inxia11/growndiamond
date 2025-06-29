@@ -1,0 +1,57 @@
+.catalog-item {
+    background: #FFF2F214;
+    border-radius: 5px;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 16px;
+
+    @include responsive1799 {
+        padding: 10px 11px;
+    }
+
+    &__link {
+        display: contents;
+    }
+
+    &__img-wrap {
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 170px;
+
+        @include responsive1799 {
+            max-width: 100px;
+        }
+
+        @include responsive1279 {
+            max-width: 87px;
+        }
+
+        @include responsive1023 {
+            max-width: 100px;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+        justify-content: center;
+    }
+
+    &__form-value {
+        font-weight: 600;
+    }
+
+    &__color-value {
+        color: #FFB55E;
+    }
+}
