@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
@@ -32,7 +33,7 @@
                         <a href="../index/index.html" class="header__logo-link">
                             <picture>
                                 <source srcset="../../img/logo.webp" type="image/webp">
-                                <img src="../../img/logo.png" alt="">
+                                <img src="../../img/logo.png" class="logo" alt="">
                             </picture>
                         </a>
                     </div>
@@ -143,9 +144,10 @@
                 </div>
             </div>
         </header>
-        <main class="main">
+        <main class="main main-black-bg">
             
-            <section class="section main-banner">
+            <section class="section main-banner" data-aos="fade-up"
+     data-aos-duration="1000">
                 <div class="container">
                     <div class="main-banner__inner">
                         <div class="main-banner__content">
@@ -177,14 +179,14 @@
                 <div class="container">
                     <div class="main-video__inner">
                         <div class="main-video__content">
-                            <div class="main-video__video-item video-wrap">
+                            <div class="main-video__video-item video-wrap" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
                                 <div class="play"></div>
                                 <video class="main-video__video" preload="metadata" poster="../../img/video-thumb.webp">
                                     <source src="../../img/video-ex.mp4" type="video/mp4">
                                     <source src="../../img/video-ex.webm" type="video/webm">
                                 </video>
                             </div>
-                            <div class="main-video__text-wrap">
+                            <div class="main-video__text-wrap" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                                 <p class="main-video__text caption--h4">В мире, где истинная ценность часто упускается, Diamonds by Grigorev олицетворяет гармонию природы и мастерства. Более 20 лет наша компания создаёт CVD бриллианты различных форм, размеров и цветов, а также производит эксклюзивные авторские украшения на заказ. </p>
                             </div>
                         </div>
@@ -196,14 +198,14 @@
                 <div class="container">
                     <div class="main-values__inner">
                         <div class="main-values__content">
-                            <div class="main-values__list-wrap">
+                            <div class="main-values__list-wrap" data-aos="fade-right" data-aos-duration="1000">
                                 <ul class="main-values__list">
                                     <li class="main-values__list-item caption--h2">Экологично и безопасно</li>
                                     <li class="main-values__list-item caption--h2">Высокое качество</li>
                                     <li class="main-values__list-item caption--h2">100% идентичны натуральным</li>
                                 </ul>
                             </div>
-                            <div class="main-values__img-wrap">
+                            <div class="main-values__img-wrap" data-aos="fade-left" data-aos-duration="1000">
                                 <picture>
                                     <source srcset="../../img/main-values.webp" type="image/webp">
                                     <img src="../../img/main-values.png" alt="" class="main-values__img">
@@ -218,7 +220,7 @@
                 <div class="container">
                     <div class="main-crystals__inner">
                         <div class="main-crystals__content">
-                            <div class="main-crystals__item">
+                            <div class="main-crystals__item" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="main-crystals__img-wrap">
                                     <picture>
                                         <source srcset="../../img/crystal-block-1.webp" type="image/webp">
@@ -230,7 +232,7 @@
                                     </picture>
                                 </div>
                             </div>
-                            <div class="main-crystals__item">
+                            <div class="main-crystals__item" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="main-crystals__img-wrap">
                                     <picture>
                                         <source srcset="../../img/crystal-block-2.webp" type="image/webp">
@@ -242,7 +244,7 @@
                                     </picture>
                                 </div>
                             </div>
-                            <div class="main-crystals__item">
+                            <div class="main-crystals__item" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="main-crystals__img-wrap">
                                     <picture>
                                         <source srcset="../../img/crystal-block-3.webp" type="image/webp">
@@ -261,7 +263,7 @@
 
             <section class="section main-about">
                 <div class="container">
-                    <div class="main-about__inner">
+                    <div class="main-about__inner" data-aos="fade-right" data-aos-duration="1000">
                         <div class="main-about__content">
                             <h3 class="main-about__title caption--h3">От экономиста до алмазного мастера: история Игоря Григорьева</h3>
                             <hr class="main-about__line">
@@ -285,11 +287,11 @@
                         <div class="main-about__img-wrap">
                             <picture>
                                 <source srcset="../../img/main-about-1.webp" type="image/webp">
-                                <img src="../../img/main-about-1.png" alt="" class="main-about__img main-about__img--1">
+                                <img src="../../img/main-about-1.png" alt="" class="main-about__img main-about__img--1" data-aos="fade-left" data-aos-duration="500" data-aos-delay="1000">
                             </picture>
                             <picture>
                                 <source srcset="../../img/main-about-2.webp" type="image/webp">
-                                <img src="../../img/main-about-2.png" alt="" class="main-about__img main-about__img--2">
+                                <img src="../../img/main-about-2.png" alt="" class="main-about__img main-about__img--2" data-aos="fade-left" data-aos-duration="500" data-aos-delay="1500">
                             </picture>
                         </div>
                     </div>
@@ -298,12 +300,12 @@
 
             <section class="section main-awards">
                 <div class="container">
-                    <div class="main-awards__headline">
+                    <div class="main-awards__headline" data-aos="fade-down" data-aos-duration="1000">
                         <h2 class="main-awards__title gradient-text caption--h1">Награды</h2>
                         <p class="main-awards__text caption--h4">Мы гордимся признанием наших достижений в индустрии изготовления бриллиантов. Эти награды подтверждают нашу приверженность совершенству и стремление создавать уникальные бриллианты, которые вдохновляют и радуют наших клиентов.</p>
                     </div>
                 </div>
-                <div class="main-awards__slider">
+                <div class="main-awards__slider" data-aos="fade-up" data-aos-duration="1000">
                     <div class="main-awards__slider-wrapper swiper-wrapper">
                         <div class="main-awards__slider-item swiper-slide">
                             <div class="main-awards__slide-inner">
@@ -357,7 +359,7 @@
             <section class="section main-catalog">
                 <div class="container">
                     <div class="main-catalog__inner">
-                        <div class="main-catalog__headline">
+                        <div class="main-catalog__headline" data-aos="fade-right" data-aos-duration="1000">
                             <h2 class="main-catalog__title gradient-text caption--h1">КАТАЛОГ</h2>
                             <p class="main-catalog__text caption--h4">Каждый бриллиант — это уникальное произведение природы и искусства. Его неповторимая игра света, особая структура и внутренние характеристики делают каждый камень исключительным. Нет двух одинаковых бриллиантов — каждый из них обладает своей историей, характером и внутренней красотой.</p>
                             <div class="main-catalog__btn-wrap">
@@ -366,7 +368,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="main-catalog__content">
+                        <div class="main-catalog__content" data-aos="fade-left" data-aos-duration="1000">
                             <div class="main-catalog__items">
                                 <div class="main-catalog__item">
                                     <div class="main-catalog__img-wrap">
@@ -510,39 +512,39 @@
                         <div class="main-reviews__img-wrap main-reviews__img-wrap--1">
                             <picture>
                                 <source srcset="../../img/main-reviews-1.webp" type="image/webp">
-                                <img src="../../img/main-reviews-1.png" alt="" class="main-reviews__img">
+                                <img src="../../img/main-reviews-1.png" alt="" class="main-reviews__img" data-aos="fade-up" data-aos-duration="1000">
                             </picture>
                         </div>
                         <div class="main-reviews__img-wrap main-reviews__img-wrap--2">
                             <picture>
                                 <source srcset="../../img/main-reviews-2.webp" type="image/webp">
-                                <img src="../../img/main-reviews-2.jpg" alt="" class="main-reviews__img">
+                                <img src="../../img/main-reviews-2.jpg" alt="" class="main-reviews__img" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                             </picture>
                         </div>
                         <div class="main-reviews__img-wrap main-reviews__img-wrap--3">
                             <picture>
                                 <source srcset="../../img/main-reviews-3.webp" type="image/webp">
-                                <img src="../../img/main-reviews-3.png" alt="" class="main-reviews__img">
+                                <img src="../../img/main-reviews-3.png" alt="" class="main-reviews__img" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                             </picture>
                         </div>
                         <div class="main-reviews__img-wrap main-reviews__img-wrap--4">
                             <picture>
                                 <source srcset="../../img/main-reviews-4.webp" type="image/webp">
-                                <img src="../../img/main-reviews-4.png" alt="" class="main-reviews__img">
+                                <img src="../../img/main-reviews-4.png" alt="" class="main-reviews__img" data-aos="fade-down" data-aos-duration="1000">
                             </picture>
                         </div>
-                        <div class="main-reviews__description-wrap">
+                        <div class="main-reviews__description-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
                             <p class="main-reviews__description caption--h4">
                                 Выбирая нас, вы получаете не только высокое качество и эксклюзивность, но и индивидуальный подход к каждому клиенту. Пусть ваш бриллиант станет отражением вашей уникальности и мечты.
                             </p>
                         </div>
                     </div>
-                    <div class="main-reviews__title-wrap">
+                    <div class="main-reviews__title-wrap" data-aos="fade-up" data-aos-duration="1000">
                         <h2 class="main-reviews__title gradient-text h-big" data-text="Diamonds by Grigorev">
                             Diamonds by Grigorev
                         </h2>
                     </div>
-                    <div class="main-reviews__btn-wrap">
+                    <div class="main-reviews__btn-wrap" data-aos="fade-down" data-aos-duration="1000">
                         <div class="container">
                             <div class="main-reviews__btn-wrap-inner">
                                 <a href="#" class="main-catalog__btn main-btn">
@@ -556,14 +558,14 @@
 
             <section class="section banner-request">
                 <div class="container">
-                    <div class="banner-request__inner">
-                        <div class="banner-request__img-wrap">
+                    <div class="banner-request__inner" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="banner-request__img-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
                             <picture>
                                 <source srcset="../../img/banner-request.webp" type="image/webp">
                                 <img src="../../img/banner-request.png" alt="" class="banner-request__img">
                             </picture>
                         </div>
-                        <div class="banner-request__content">
+                        <div class="banner-request__content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                             <div class="banner-request__text-wrap">
                                 <h3 class="banner-request__title caption--h2">Изготовление ювелирного изделия на заказ</h3>
                                 <hr class="banner-request__line">
@@ -584,14 +586,14 @@
             <section class="section main-contacts">
                 <div class="container">
                     <div class="main-contacts__inner">
-                        <div class="main-contacts__headline">
+                        <div class="main-contacts__headline" data-aos="fade-up" data-aos-duration="1000">
                             <h2 class="main-contacts__title gradient-text caption--h1">КОНТАКТЫ</h2>
                         </div>
                         <div class="main-contacts__content">
-                            <div class="main-contacts__map-wrap">
+                            <div class="main-contacts__map-wrap" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="../../img/map-ex.png" alt="" class="main-contacts__map">
                             </div>
-                            <div class="main-contacts__contacts-wrap">
+                            <div class="main-contacts__contacts-wrap" data-aos="fade-left" data-aos-duration="1000">
                                 <h3 class="main-contacts__contacts-title caption--h3 gradient-text">Доставка по всей России</h3>
                                 <div class="main-contacts__contacts">
                                     <div class="main-contacts__contact-item">
@@ -703,7 +705,9 @@
             <div class="main-blur main-blur--1"></div>
             <div class="main-blur main-blur--2"></div>
             <div class="main-blur main-blur--3"></div>
-            <div class="main-bg main-bg-1"></div>
+            <div class="main-bg main-bg--1">
+            </div>
+            <div class="main-bg main-bg--2"></div>
 
         </main>
         <footer class="footer">
@@ -714,7 +718,7 @@
                             <a href="../index/index.html" class="footer-top__logo-link">
                                 <picture>
                                     <source srcset="../../img/logo.webp" type="image/webp">
-                                    <img src="../../img/logo.png" alt="">
+                                    <img src="../../img/logo.png" class="logo" alt="">
                                 </picture>
                             </a>
                         </div>
@@ -870,6 +874,7 @@
 <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
 <script src="../../libs/fancybox/fancybox.umd.js"></script>
 <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<script src="../../libs/aos/aos.js"></script>
 <script src="../../js/main.js"></script>
 
 </html>

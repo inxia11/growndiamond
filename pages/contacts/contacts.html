@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
 
-    <title>Как мы работаем</title>
+    <title>Контакты</title>
 
     <!-- <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
@@ -32,7 +33,7 @@
                         <a href="../index/index.html" class="header__logo-link">
                             <picture>
                                 <source srcset="../../img/logo.webp" type="image/webp">
-                                <img src="../../img/logo.png" alt="">
+                                <img src="../../img/logo.png" class="logo" alt="">
                             </picture>
                         </a>
                     </div>
@@ -143,9 +144,9 @@
                 </div>
             </div>
         </header>
-        <main class="main">
+        <main class="main main-black-bg">
 
-            <section class="section breadcrumbs">
+            <section class="section breadcrumbs" data-aos="fade-right" data-aos-duration="1000">
                 <div class="container">
                     <div class="breadcrumbs__inner">
                         <ul class="breadcrumbs__list">
@@ -161,11 +162,11 @@
             </section>
 
             <div class="container">
-                <h1 class="contacts__title caption--h1  gradient-text">Контакты</h1>
+                <h1 class="contacts__title caption--h1  gradient-text" data-aos="fade-up" data-aos-duration="1000">Контакты</h1>
             </div>
 
 
-            <section class="section contacts-map">
+            <section class="section contacts-map" data-aos="fade-up" data-aos-duration="1000">
                 <div class="container">
                     <div class="contacts-map__inner">
                         <div class="contacts-map__map">
@@ -255,14 +256,14 @@
            
             <section class="section callback-form">
                 <div class="container">
-                    <div class="callback-form__inner">
-                        <div class="callback-form__img-wrap">
+                    <div class="callback-form__inner" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="callback-form__img-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
                             <picture>
                                 <source srcset="../../img/callback-form.webp" type="image/webp">
                                 <img src="../../img/callback-form.png" alt="" class="callback-form__img">
                             </picture>
                         </div>
-                        <div class="callback-form__content">
+                        <div class="callback-form__content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                             <h3 class="callback-form__title caption--h3">Свяжитесь с нами</h3>
                             <div class="callback-form__form-wrap">
                                 <form action="" class="callback-form__form">
@@ -294,6 +295,7 @@
             </section>
 
             <div class="main-blur main-blur--4"></div>
+            <div class="main-bg main-bg--4"></div>
 
         </main>
         <footer class="footer">
@@ -304,7 +306,7 @@
                             <a href="../index/index.html" class="footer-top__logo-link">
                                 <picture>
                                     <source srcset="../../img/logo.webp" type="image/webp">
-                                    <img src="../../img/logo.png" alt="">
+                                    <img src="../../img/logo.png" class="logo" alt="">
                                 </picture>
                             </a>
                         </div>
@@ -460,6 +462,7 @@
 <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
 <script src="../../libs/fancybox/fancybox.umd.js"></script>
 <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<script src="../../libs/aos/aos.js"></script>
 <script src="../../js/main.js"></script>
 
 </html>
