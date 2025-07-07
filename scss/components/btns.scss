@@ -36,13 +36,36 @@
         background: $baseGradient;
         mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: exclude;
-        transition: all 0.3s;
+        transition: all 0.5s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        border-radius: 30px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 2px;
+        background: linear-gradient(30deg, #B16206 0%, #ffffff 45.67%, #C7720E 100%);;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        transition: all 0.5s;
+        opacity: 0;
     }
 
     &:hover {
         &::before {
             transform: scale(1.03);
+            opacity: 0;
+        }
+
+        &::after {
+            transform: scale(1.03);
+            opacity: 1;
         }
     }
+  
 
 }

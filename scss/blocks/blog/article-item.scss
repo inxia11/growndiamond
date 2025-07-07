@@ -55,7 +55,13 @@
 
     &__link {
         text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: text-decoration-color 0.3s;
         color: #FFB55E;
+
+        @include hover {
+            text-decoration-color: #FFB55E;
+        }
     }
 
     

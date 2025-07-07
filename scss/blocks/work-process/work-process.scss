@@ -146,6 +146,13 @@
         width: 100%;
         height: 100%;
 
+        .main-bg__canvas {
+            bottom: -80px;
+            mask-image: url("../img/work-process-item-1.png");
+            z-index: 2;
+            top: auto;
+        }
+
     }
 
     &__img {

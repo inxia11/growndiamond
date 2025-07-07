@@ -206,6 +206,7 @@
         align-items: center;
         justify-content: flex-start;
         transition: all 0.3s;
+        cursor: pointer;
 
         &--active, &:hover {
             background: #FFB55E14;

@@ -1,4 +1,5 @@
 .main-catalog {
+    position: relative;
     &__inner {
         display: grid;
         grid-template-columns: 1fr 480px;

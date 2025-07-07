@@ -1,5 +1,11 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #111516E6;
+    backdrop-filter: blur(7px);
+    transition: all 0.3s;
 
     &__inner {
         display: flex;
@@ -69,32 +75,38 @@
         justify-content: center;
         position: relative;
         padding: 4px 8px;
-        transition: all 0.3s;
-        background-color: #111516;
+        transition: all 0.2s;
+        background-color: transparent;
         border-radius: 20px;
+        line-height: normal;
+        
 
-        &::after {
-            content: '';
+        &::before {
+            content: "";
             position: absolute;
-            border-radius: 20px;
-            z-index: -1;
-            background: linear-gradient(0deg, #000000 0%, #FFDEB8 69.23%, #C7720E 100%);
-            top: -1px; bottom: -1px;
-            left: -1px; right: -1px;
-            height: 0%;
-            transform: rotate(180deg);
-            transition: height 0.3s;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50px;
+            border: 1px solid transparent;
+            background: linear-gradient(180deg, #000000 0%, #FFDEB8 69.23%, #C7720E 100%) border-box;
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            transition: all 0.2s;
+            opacity: 0;
         }
+        
 
         &:hover {
-            &::after {
-                height: 110%;
+            &::before {
+                opacity: 1;
             }
         }
         
         &.active {
-            &::after {
-                height: 110%;
+            &::before {
+                opacity: 1;
             }
         }
     }

@@ -64,6 +64,31 @@
 
     }
 
+    &__fancy-link {
+        position: relative;
+        display: contents;
+
+        &::before {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            content: '';
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            z-index: 2;
+            background-image: url("../img/svg/search.svg");
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        @include hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
 
     &__slider-wrapper {
         align-items: flex-end;

@@ -25,17 +25,29 @@
         align-items: center;
         justify-content: center;
         max-width: 170px;
+        max-height: 170px;
+        height: 100%;
+        width: 100%;
 
         @include responsive1799 {
             max-width: 100px;
+            max-height: 100px;
         }
 
         @include responsive1279 {
             max-width: 87px;
+            max-height: 87px;
         }
 
         @include responsive1023 {
             max-width: 100px;
+            max-height: 100px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 

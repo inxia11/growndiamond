@@ -1,3 +1,5 @@
+
+
 const mobileHeader = $(".header__mobile");
 const burgerBtn = $(".header__burger");
 const closeHeaderBtn = $(".header-mobile__close");
@@ -30,6 +32,7 @@ $(document).ready(function () {
       video.on('ended', function() {
         play.removeClass('hide');
         video.removeClass('playing');
+        this.src = this.src;
       });
 
       video.on('click', function() {
@@ -177,7 +180,6 @@ $(document).ready(function () {
     });
     var swiper2 = new Swiper(".catalog-detail__img-slider", {
       slidesPerView: 1,
-      autoHeight: true,
       navigation: {
         nextEl: ".catalog-detail__button--next",
         prevEl: ".catalog-detail__button--prev",
@@ -194,6 +196,127 @@ $(document).ready(function () {
       $(this).toggleClass("catalog-section__filter-name-link--active");
     });
   }
+
+
+  if($(".overlay").length > 0) {
+    $(".overlay").on("click", function(event) {
+      if($(".fancybox__container").length > 0) {
+        event.preventDefault();
+        $(".fancybox__container").remove();
+      }
+    });
+  }
+
+
+
+  if ($(".main-catalog__item--3").length > 0) {
+    const animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'), // контейнер для анимации
+      renderer: 'svg', // тип рендерера (может быть 'svg', 'canvas' или 'html')
+      loop: true, // зацикливание анимации
+      autoplay: false, // автоматический запуск анимации
+      path: '../../img/json/catalog-item-1.json' // путь к вашему JSON-файлу с анимацией
+    });
+
+    var interval; 
+    $(".main-catalog__item--3").on("mouseenter", function(event) {
+      event.preventDefault();
+      $(".main-catalog__item--3").addClass("main-catalog__item--active");
+      animation.play();
+      clearInterval(interval);
+    });
+    
+
+    $(".main-catalog__item--3").on("mouseleave", function(event) {
+      event.preventDefault();
+      $(".main-catalog__item--3").removeClass("main-catalog__item--active");
+
+      if($(".main-catalog__item--3").hasClass("main-catalog__item--active")) {
+        clearInterval(interval);
+      }else{
+        interval = setInterval(function() {
+          endedAnimation(animation.currentFrame, animation.totalFrames);
+        }, 1000/animation.frameRates);
+      }
+    });
+
+    function endedAnimation(currentFrame, totalFrames) {
+
+      if(currentFrame >= totalFrames - 5) {
+        animation.stop();
+        clearInterval(interval);
+      }
+    }
+
+  }
+
+  if($(".main-bg__canvas").length > 0) {
+    $(".main-bg__canvas").each(function() {
+      var canvas = $(this)[0];
+      canvas.width = $(this).parent().width() * 0.8;
+      canvas.height = $(this).parent().height() * 0.8;
+      var ctx = canvas.getContext("2d");
+      var stars = [];
+      var numStars = 250;
+
+      for(var i = 0; i < numStars; i++) {
+        var x = Math.round(Math.random() * canvas.width);
+        var y = Math.round(Math.random() * canvas.height);
+        var size = Math.random() * 2;
+        var opacity = Math.random();
+
+        var star = new Star(x, y, size, opacity);
+        stars.push(star);
+      }
+
+      function Star(x, y, size, opacity) {
+        this.x = parseInt(x);
+        this.y = parseInt(y);
+        this.size = size;
+        this.opacity = opacity;
+      }
+
+      Star.prototype.draw = function(ctx) {
+        ctx.fillRect(this.x, this.y, this.size, this.size);
+        ctx.fillStyle = "rgba(255, 255, 255, " + this.opacity + ")";
+        ctx.shadowBlur = 8;
+	      ctx.shadowColor = '#ffffff';
+      }
+
+      function update() {
+        for(var i = 0; i < stars.length; i++) {
+          stars[i].opacity += 0.01;
+          if(stars[i].opacity > 1) {
+            stars[i].opacity = 0;
+          }
+        }
+      }
+
+      function draw() {
+        update();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for(var i = 0; i < stars.length; i++) {
+          stars[i].draw(ctx);
+        }
+      }
+
+      function animate() {
+        draw();
+        window.requestAnimationFrame(animate);
+      }
+
+      animate();
+
+    })
+  }
+
   
-  AOS.init();
+  
+  AOS.init({
+    offset: -50,
+    delay: 100,
+    duration: 1000
+  });
+
+  
 });

@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+    
 </head>
 
 <body>
@@ -206,6 +208,7 @@
                                 </ul>
                             </div>
                             <div class="main-values__img-wrap" data-aos="fade-left" data-aos-duration="1000">
+                                <canvas class="main-bg__canvas"></canvas>
                                 <picture>
                                     <source srcset="../../img/main-values.webp" type="image/webp">
                                     <img src="../../img/main-values.png" alt="" class="main-values__img">
@@ -247,8 +250,8 @@
                             <div class="main-crystals__item" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="main-crystals__img-wrap">
                                     <picture>
-                                        <source srcset="../../img/crystal-block-3.webp" type="image/webp">
-                                        <img src="../../img/crystal-block-3.png" alt="" class="main-crystals__img">
+                                        <source srcset="../../img/crystal-block-31.webp" type="image/webp">
+                                        <img src="../../img/crystal-block-31.png" alt="" class="main-crystals__img">
                                     </picture>
                                     <picture>
                                         <source srcset="../../img/crystal-block-3.webp" type="image/webp">
@@ -296,6 +299,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="main-bg main-bg--2">
+                    <canvas class="main-bg__canvas"></canvas>
+                </div>
             </section>
 
             <section class="section main-awards">
@@ -309,42 +315,52 @@
                     <div class="main-awards__slider-wrapper swiper-wrapper">
                         <div class="main-awards__slider-item swiper-slide">
                             <div class="main-awards__slide-inner">
-                                <picture>
-                                    <source srcset="../../img/award-1.webp" type="image/webp">
-                                    <img src="../../img/award-1.png" alt="" class="main-awards__slider-img">
-                                </picture>
+                                <a data-fancybox href="../../img/award-1.png" class="main-awards__fancy-link">
+                                    <picture>
+                                        <source srcset="../../img/award-1.webp" type="image/webp">
+                                        <img src="../../img/award-1.png" alt="" class="main-awards__slider-img">
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                         <div class="main-awards__slider-item swiper-slide">
                             <div class="main-awards__slide-inner">
-                                <picture>
-                                    <source srcset="../../img/award-2.webp" type="image/webp">
-                                    <img src="../../img/award-2.png" alt="" class="main-awards__slider-img">
-                                </picture>
+                                <a data-fancybox href="../../img/award-2.png" class="main-awards__fancy-link">
+                                    <picture>
+                                        <source srcset="../../img/award-2.webp" type="image/webp">
+                                        <img src="../../img/award-2.png" alt="" class="main-awards__slider-img">
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                         <div class="main-awards__slider-item swiper-slide">
                             <div class="main-awards__slide-inner">
-                                <picture>
-                                    <source srcset="../../img/award-3.webp" type="image/webp">
-                                    <img src="../../img/award-3.png" alt="" class="main-awards__slider-img">
-                                </picture>
+                                <a data-fancybox href="../../img/award-3.png" class="main-awards__fancy-link">
+                                    <picture>
+                                        <source srcset="../../img/award-3.png" type="image/webp">
+                                        <img src="../../img/award-3.png" alt="" class="main-awards__slider-img">
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                         <div class="main-awards__slider-item swiper-slide">
                             <div class="main-awards__slide-inner">
-                                <picture>
-                                    <source srcset="../../img/award-4.webp" type="image/webp">
-                                    <img src="../../img/award-4.png" alt="" class="main-awards__slider-img">
-                                </picture>
+                                <a data-fancybox href="../../img/award-4.png" class="main-awards__fancy-link">
+                                    <picture>
+                                        <source srcset="../../img/award-4.webp" type="image/webp">
+                                        <img src="../../img/award-4.png" alt="" class="main-awards__slider-img">
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                         <div class="main-awards__slider-item swiper-slide">
                             <div class="main-awards__slide-inner">
-                                <picture>
-                                    <source srcset="../../img/award-5.webp" type="image/webp">
-                                    <img src="../../img/award-5.png" alt="" class="main-awards__slider-img">
-                                </picture>
+                                <a data-fancybox href="../../img/award-5.png" class="main-awards__fancy-link">
+                                    <picture>
+                                        <source srcset="../../img/award-5.webp" type="image/webp">
+                                        <img src="../../img/award-5.png" alt="" class="main-awards__slider-img">
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -370,12 +386,13 @@
                         </div>
                         <div class="main-catalog__content" data-aos="fade-left" data-aos-duration="1000">
                             <div class="main-catalog__items">
-                                <div class="main-catalog__item">
+                                <div class="main-catalog__item main-catalog__item--1">
                                     <div class="main-catalog__img-wrap">
-                                        <picture>
+                                        <div id="lottie-animation-round"></div>
+                                        <!-- <picture>
                                             <source srcset="../../img/main-catalog-1.webp" type="image/webp">
                                             <img src="../../img/main-catalog-1.png" alt="" class="main-catalog__img">
-                                        </picture>
+                                        </picture> -->
                                     </div>
                                     <div class="main-catalog__item-content">
                                         <div class="main-catalog__item-chars">
@@ -398,10 +415,11 @@
                                 </div>
                                 <div class="main-catalog__item">
                                     <div class="main-catalog__img-wrap">
-                                        <picture>
+                                        <!-- <div id="lottie-animation-"></div> -->
+                                        <!-- <picture>
                                             <source srcset="../../img/main-catalog-2.webp" type="image/webp">
                                             <img src="../../img/main-catalog-2.png" alt="" class="main-catalog__img">
-                                        </picture>
+                                        </picture> -->
                                     </div>
                                     <div class="main-catalog__item-content">
                                         <div class="main-catalog__item-chars">
@@ -422,12 +440,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="main-catalog__item">
+                                <div class="main-catalog__item main-catalog__item--3">
                                     <div class="main-catalog__img-wrap">
-                                        <picture>
-                                            <source srcset="../../img/main-catalog-3.webp" type="image/webp">
-                                            <img src="../../img/main-catalog-3.png" alt="" class="main-catalog__img">
-                                        </picture>
+                                        <div id="lottie-animation-emerald"></div>
                                     </div>
                                     <div class="main-catalog__item-content">
                                         <div class="main-catalog__item-chars">
@@ -450,10 +465,11 @@
                                 </div>
                                 <div class="main-catalog__item">
                                     <div class="main-catalog__img-wrap">
-                                        <picture>
+                                        <div id="lottie-animation-pear"></div>
+                                        <!-- <picture>
                                             <source srcset="../../img/main-catalog-4.webp" type="image/webp">
                                             <img src="../../img/main-catalog-4.png" alt="" class="main-catalog__img">
-                                        </picture>
+                                        </picture> -->
                                     </div>
                                     <div class="main-catalog__item-content">
                                         <div class="main-catalog__item-chars">
@@ -476,10 +492,11 @@
                                 </div>
                                 <div class="main-catalog__item">
                                     <div class="main-catalog__img-wrap">
-                                        <picture>
+                                        <div id="lottie-animation-oval"></div>
+                                        <!-- <picture>
                                             <source srcset="../../img/main-catalog-5.webp" type="image/webp">
                                             <img src="../../img/main-catalog-5.png" alt="" class="main-catalog__img">
-                                        </picture>
+                                        </picture> -->
                                     </div>
                                     <div class="main-catalog__item-content">
                                         <div class="main-catalog__item-chars">
@@ -504,6 +521,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="main-bg main-bg--1">
+                    <canvas class="main-bg__canvas"></canvas>
+                </div>
+                <div class="diamond-bg"></div>
             </section>
 
             <section class="section main-reviews">
@@ -544,7 +565,7 @@
                             Diamonds by Grigorev
                         </h2>
                     </div>
-                    <div class="main-reviews__btn-wrap" data-aos="fade-down" data-aos-duration="1000">
+                    <!-- <div class="main-reviews__btn-wrap" data-aos="fade-down" data-aos-duration="1000">
                         <div class="container">
                             <div class="main-reviews__btn-wrap-inner">
                                 <a href="#" class="main-catalog__btn main-btn">
@@ -552,7 +573,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -665,7 +686,7 @@
                                         </a>
                                     </div>
                                     <div class="main-contacts__contact-item main-contacts__contact-item--social">
-                                        <a href="#" class="main-contacts__contact-link">
+                                        <a href="https://vk.com/club229679998" class="main-contacts__contact-link">
                                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="17.5385" cy="17.8295" r="17.5385" fill="white"/>
                                                 <g clip-path="url(#clip0_287_180)">
@@ -678,7 +699,7 @@
                                                 </defs>
                                             </svg>
                                         </a>
-                                        <a href="#" class="main-contacts__contact-link">
+                                        <a href="https://t.me/Diamonds_From_Grigorev" class="main-contacts__contact-link">
                                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_287_184)">
                                                     <path d="M17.5769 0.291016C12.9356 0.291016 8.48441 2.13476 5.20253 5.41666C1.92064 8.69854 0.0769043 13.1497 0.0769043 17.791C0.0769043 22.4324 1.92064 26.8834 5.20253 30.1654C8.48441 33.4473 12.9356 35.2911 17.5769 35.2911C22.2182 35.2911 26.6694 33.4473 29.9513 30.1654C33.2332 26.8834 35.0769 22.4324 35.0769 17.791C35.0769 13.1497 33.2332 8.69854 29.9513 5.41666C26.6694 2.13476 22.2182 0.291016 17.5769 0.291016Z" fill="white"/>
@@ -699,16 +720,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="main-bg main-bg--7">
+                    <canvas class="main-bg__canvas"></canvas>
+                </div>
             </section>
 
 
             <div class="main-blur main-blur--1"></div>
             <div class="main-blur main-blur--2"></div>
             <div class="main-blur main-blur--3"></div>
-            <div class="main-bg main-bg--1">
-            </div>
-            <div class="main-bg main-bg--2"></div>
-
+            <div class="main-blur main-blur--6"></div>
+            
+            
         </main>
         <footer class="footer">
             <div class="footer-top">
@@ -724,11 +747,6 @@
                         </div>
                         <div class="footer-top__menu-wrap">
                             <ul class="footer-top__menu">
-                                <li class="footer-top__menu-item">
-                                    <a href="../history/history.html" class="footer-top__menu-link">
-                                        <span class="footer-top__menu-name">О нас</span>
-                                    </a>
-                                </li>
                                 <li class="footer-top__menu-item">
                                     <a href="../catalog/catalog-section.html" class="footer-top__menu-link">
                                         <span class="footer-top__menu-name">Каталог</span>
@@ -805,7 +823,7 @@
                             <div class="footer-top__contacts-item">
                                 <div class="footer-top__social">
                                     <div class="footer-top__social-tg">
-                                        <a href="#" class="footer-top__contacts-link">
+                                        <a href="https://t.me/Diamonds_From_Grigorev" class="footer-top__contacts-link">
                                             <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10.5946 14.4994L10.148 20.6419C10.7869 20.6419 11.0637 20.3734 11.3956 20.0512L14.3916 17.2516L20.5994 21.6967C21.7379 22.3171 22.5401 21.9904 22.8473 20.6726L26.9221 2.00353L26.9232 2.00243C27.2844 0.356844 26.3146 -0.286652 25.2053 0.117045L1.25348 9.08303C-0.381185 9.70343 -0.356434 10.5944 0.975598 10.9982L7.09911 12.8605L21.3228 4.15842C21.9922 3.72502 22.6009 3.96482 22.1002 4.39822L10.5946 14.4994Z" fill="white"/>
                                             </svg>  
@@ -867,6 +885,7 @@
 
 </body>
 
+
 <script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
 <script src="../../libs/swiper/swiper-bundle.min.js"></script>
 <script src="../../libs/selectric/jquery.selectric.min.js"></script>
@@ -875,6 +894,7 @@
 <script src="../../libs/fancybox/fancybox.umd.js"></script>
 <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
 <script src="../../libs/aos/aos.js"></script>
+<script src="../../libs/lottie/lottie.min.js"></script>
 <script src="../../js/main.js"></script>
 
 </html>

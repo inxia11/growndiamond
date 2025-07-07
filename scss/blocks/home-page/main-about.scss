@@ -1,5 +1,6 @@
 .main-about {
-    
+    position: relative;
+
     @include responsive1023 {
         padding-bottom: 400px;
     }
@@ -91,7 +92,7 @@
             @include responsive1023 {
                 top: calc(100% + 32px);
                 left: 50%;
-                transform: translateX(-90%);
+                transform: translateX(-90%) !important;
                 max-width: 195px;
             }
 

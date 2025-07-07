@@ -1,8 +1,17 @@
 .history-section {
 
     &__content {
-        justify-content: flex-start !important;
+        justify-content: flex-start;
+
+        &:has( .base-section__title) {
+            justify-content: space-between;
+
+            @include responsive1799 {
+                justify-content: flex-start;
+            }
+        }
     }
+    
 
     &__inner {
         &--big-pd {
@@ -49,6 +58,10 @@
     &__text-title {
         font-weight: 600;
         min-height: 20px;
+
+        &--regular {
+            font-weight: 400;
+        }
     }
 
     &__image {
@@ -72,6 +85,10 @@
 
             @include responsive1023 {
                 max-width: 45%;
+            }
+
+            @media(max-width: 479px) {
+                max-width: 40%;
             }
 
 
@@ -106,7 +123,7 @@
 
     &__quote-wrap {
         position: absolute;
-        bottom: 0;
+        bottom: -50px;
         left: 0;
         z-index: 2;
         transform: translate(-30%, 50%);
@@ -117,6 +134,7 @@
 
         @include responsive1799 {
             transform: translate(-30%, 70%);
+            bottom: 0px;
         }
 
         @include responsive1279 {
