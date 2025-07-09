@@ -56,7 +56,7 @@
 
     &__item {
         display: grid;
-        grid-template-columns: 145px 1fr;
+        grid-template-columns: 150px 1fr;
         gap: 20px;
         align-items: center;
 
@@ -74,7 +74,7 @@
     }
 
     &__img-wrap {
-        max-height: 145px;
+        max-height: 150px;
         height: 100%;
         display: flex;
         justify-content: center;

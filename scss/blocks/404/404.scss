@@ -1,0 +1,279 @@
+.not-found {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+
+        @include responsive1799 {
+            gap: 50px;
+        }
+
+        @include responsive1519 {
+            gap: 30px;
+        }
+
+        @include responsive1279 {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        @include responsive1023 {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    &__icon-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/blink-big.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 16px;
+            left: 220px;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+            animation-name: blinker-bright;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include responsive1799 {
+                top: 14px;
+                left: 200px;
+                width: 90px;
+                height: 90px;
+            }
+
+            @include responsive1519 {
+                top: 14px;
+                left: 140px;
+                width: 50px;
+                height: 50px;
+            }
+
+            @include responsive1279 {
+                left: 120px;
+            }
+
+            @include responsive1023 {
+                left: 80px;
+            }
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../img/blink-big.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 145px;
+            left: 430px;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+            animation-name: blinker-bright;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include responsive1799 {
+                top: 100px;
+                left: 400px;
+                width: 70px;
+                height: 70px;
+            }
+
+            @include responsive1519 {
+                top: 100px;
+                left: 265px;
+                width: 50px;
+                height: 50px;
+            }
+
+            @include responsive1279 {
+                left: 225px;
+            }
+
+            @include responsive1023 {
+                left: 175px;
+                top: 50px;
+            }
+
+                   
+        }
+    }
+
+    &__icon {
+        width: 730px;
+        height: auto;
+        object-fit: contain;
+        transform: none;
+
+        &:hover {
+            transform: none;
+        }
+
+        @include responsive1799 {
+            width: 650px;
+        }
+
+        @include responsive1519 {
+            width: 450px;
+        }
+
+        @include responsive1279 {
+            width: 400px;
+        }
+
+        @include responsive1023 {
+            max-width: max-content;
+            width: 100%;
+        }
+    }
+
+    
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        max-width: 620px;
+        width: 100%;
+
+        @include responsive1799 {
+            gap: 20px;
+        }
+
+        @include responsive1519 {
+            max-width: 300px;
+        }
+
+        @include responsive1279 {
+            max-width: 100%;
+        }
+
+        @include responsive1023 {
+            max-width: 350px;
+        }
+    }
+
+    &__link {
+        max-width: 100%;
+    }
+
+    &-bg-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &-bg--left {
+        position: absolute;
+        bottom: 50px;
+        left: 0px;
+        width: 680px;
+        height: 480px;
+        z-index: -1;
+        background-image: url(../img/main-bg--404-left.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include responsive1799 {
+            width: 440px;
+            height: 320px;
+            bottom: 120px;
+        }
+
+        @include responsive1519 {
+            bottom: 110px;
+        }
+
+        @include responsive1279 {
+            display: none;
+        }
+
+        @include responsive1023 {
+            display: block;
+            left: -145px;
+            bottom: 250px;
+        }
+
+         &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../img/blink-big.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 14px;
+            left: 360px;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+            animation-name: blinker-bright;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include responsive1799 {
+                top: 11px;
+                left: 240px;
+                width: 70px;
+                height: 70px;
+            }
+                   
+        }
+
+    }
+
+    &-bg--right {
+        position: absolute;
+        bottom: 50px;
+        right: 0px;
+        width: 680px;
+        height: 480px;
+        z-index: -1;
+        background-image: url(../img/main-bg--404-right.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include responsive1799 {
+            width: 440px;
+            height: 320px;
+            bottom: 120px;
+        }
+
+        @include responsive1519 {
+            bottom: 110px;
+        }
+
+        @include responsive1279 {
+            bottom: 20px;
+        }
+
+        @include responsive1023 {
+            display: none;
+        }
+    }
+
+}

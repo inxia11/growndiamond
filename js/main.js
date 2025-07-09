@@ -209,29 +209,81 @@ $(document).ready(function () {
 
 
 
-  if ($(".main-catalog__item--3").length > 0) {
+  if ($(".main-catalog__item--round").length > 0) {
     const animation = lottie.loadAnimation({
-      container: document.getElementById('lottie-animation'), // контейнер для анимации
+      container: document.getElementById('lottie-animation-round'), // контейнер для анимации
       renderer: 'svg', // тип рендерера (может быть 'svg', 'canvas' или 'html')
       loop: true, // зацикливание анимации
       autoplay: false, // автоматический запуск анимации
-      path: '../../img/json/catalog-item-1.json' // путь к вашему JSON-файлу с анимацией
+      path: '../../img/json/round.json' // путь к вашему JSON-файлу с анимацией
     });
 
+    hoverAnimation($(".main-catalog__item--round"), animation);
+  }
+
+  if ($(".main-catalog__item--emerald").length > 0) {
+    const animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation-emerald'), // контейнер для анимации
+      renderer: 'svg', // тип рендерера (может быть 'svg', 'canvas' или 'html')
+      loop: true, // зацикливание анимации
+      autoplay: false, // автоматический запуск анимации
+      path: '../../img/json/emerald.json' // путь к вашему JSON-файлу с анимацией
+    });
+
+    hoverAnimation($(".main-catalog__item--emerald"), animation);
+  }
+
+  if ($(".main-catalog__item--pear").length > 0) {
+    const animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation-pear'), // контейнер для анимации
+      renderer: 'svg', // тип рендерера (может быть 'svg', 'canvas' или 'html')
+      loop: true, // зацикливание анимации
+      autoplay: false, // автоматический запуск анимации
+      path: '../../img/json/pear.json' // путь к вашему JSON-файлу с анимацией
+    });
+
+    hoverAnimation($(".main-catalog__item--pear"), animation);
+  }
+
+  if ($(".main-catalog__item--oval").length > 0) {
+    const animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation-oval'), // контейнер для анимации
+      renderer: 'svg', // тип рендерера (может быть 'svg', 'canvas' или 'html')
+      loop: true, // зацикливание анимации
+      autoplay: false, // автоматический запуск анимации
+      path: '../../img/json/oval.json' // путь к вашему JSON-файлу с анимацией
+    });
+
+    hoverAnimation($(".main-catalog__item--oval"), animation);
+  }
+
+  if ($(".main-catalog__item--princess").length > 0) {
+    const animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation-princess'), // контейнер для анимации
+      renderer: 'svg', // тип рендерера (может быть 'svg', 'canvas' или 'html')
+      loop: true, // зацикливание анимации
+      autoplay: false, // автоматический запуск анимации
+      path: '../../img/json/princess.json' // путь к вашему JSON-файлу с анимацией
+    });
+
+    hoverAnimation($(".main-catalog__item--princess"), animation);
+  }
+
+  function hoverAnimation(element, animation) {
     var interval; 
-    $(".main-catalog__item--3").on("mouseenter", function(event) {
+    element.on("mouseenter", function(event) {
       event.preventDefault();
-      $(".main-catalog__item--3").addClass("main-catalog__item--active");
+      element.addClass("main-catalog__item--active");
       animation.play();
       clearInterval(interval);
     });
     
 
-    $(".main-catalog__item--3").on("mouseleave", function(event) {
+    element.on("mouseleave", function(event) {
       event.preventDefault();
-      $(".main-catalog__item--3").removeClass("main-catalog__item--active");
+      element.removeClass("main-catalog__item--active");
 
-      if($(".main-catalog__item--3").hasClass("main-catalog__item--active")) {
+      if(element.hasClass("main-catalog__item--active")) {
         clearInterval(interval);
       }else{
         interval = setInterval(function() {
@@ -247,7 +299,7 @@ $(document).ready(function () {
         clearInterval(interval);
       }
     }
-
+    
   }
 
   if($(".main-bg__canvas").length > 0) {

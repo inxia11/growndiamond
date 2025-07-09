@@ -13,7 +13,15 @@
     }
 }
 
-@keyframes stars {
-  0%, 50%, 100% {opacity: 0;}
-  5%, 45% {opacity: 1;}
+@keyframes blinker-bright {
+  from { 
+        opacity: 1;
+    }
+  50% { 
+        opacity: 0.3; 
+
+    }
+  to { 
+        opacity: 1; 
+    }
 }
