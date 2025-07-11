@@ -91,6 +91,14 @@
         @include responsive1279 {
             max-height: 80px;
         }
+
+        #lottie-animation-emerald {
+            filter: brightness(1.3);
+        }
+
+        #lottie-animation-princess, #lottie-animation-round, #lottie-animation-pear, #lottie-animation-oval {
+            filter: brightness(2);
+        }
     }
 
     &__img {

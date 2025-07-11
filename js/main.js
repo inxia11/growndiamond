@@ -5,6 +5,8 @@ const burgerBtn = $(".header__burger");
 const closeHeaderBtn = $(".header-mobile__close");
 
 
+
+
 $(document).ready(function () {
 
   burgerBtn.on("click", function () {
@@ -207,7 +209,32 @@ $(document).ready(function () {
     });
   }
 
+  if($(".btn-modal").length > 0) {
+    $(".btn-modal").each(function(index){
+      $(this).on("click", function(event) {
+        event.preventDefault();
+        console.log($(this).attr("data-modal"));
+        $(".overlay").addClass("visible");
+        $(`.modal-form[data-form="${$(this).attr("data-modal")}"]`).addClass("active");
+      });
+    })
+  }
 
+  if($(".modal-form__close-btn").length > 0) {
+    $(".modal-form__close-btn").on("click", function(event) {
+      event.preventDefault();
+      $(".overlay").removeClass("visible");
+      $(".modal-form").removeClass("active");
+    });
+  }
+
+  if($("#callback-form__file-input").length > 0) {
+    $("#callback-form__file-input").on("change", function(event) {
+      $("#callback-form__file-name").text(this.files[0].name);
+    });
+  }
+
+  
 
   if ($(".main-catalog__item--round").length > 0) {
     const animation = lottie.loadAnimation({
@@ -370,5 +397,9 @@ $(document).ready(function () {
     duration: 1000
   });
 
+
+  $('select').selectric({
+    arrowButtonMarkup: "<b class='button'><svg width='22' height='10' viewBox='0 0 22 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 1L11 9L1 1' stroke='white' stroke-linecap='round' stroke-linejoin='round'/></svg></b>",
+  });
   
 });

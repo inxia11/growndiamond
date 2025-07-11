@@ -137,7 +137,7 @@
         }
 
         &__copyright {
-            font-weight: 400;
+            font-weight: 300;
             font-size: 12px;
             line-height: 16px;
 
@@ -159,10 +159,36 @@
 
         &__dev-sub {
             font-size: 12px;
+            text-wrap: nowrap;
         }
 
         &__dev-link {
             display: contents;
+        }
+
+        &__policy-inform {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+
+            @include responsive1799 {
+                max-width: 750px;
+                row-gap: 10px;
+            }
+
+            @include responsive1023 {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        &__policy-link {
+           font-size: 12px;
+           font-weight: 300;
+           text-decoration: underline;
+           text-decoration-color: #FFFFFF80;
         }
     }
 
